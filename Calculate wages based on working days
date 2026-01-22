@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int days;
+    float wage, total;
+
+    printf("Enter number of days worked: ");
+    scanf("%d", &days);
+
+    printf("Enter wage per day: ");
+    scanf("%f", &wage);
+
+    total = days * wage;
+
+    printf("Total Wages = %.2f\n", total);
+
+    return 0;
+}
