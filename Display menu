@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void menu() {
+    printf("1. Tea\n2. Coffee\n3. Milk\n");
+}
+
+int main() {
+    int choice;
+
+    menu();
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    printf("You selected option %d\n", choice);
+    return 0;
+}
