@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int m1, m2, m3;
+    int total;
+    float avg;
+
+    printf("Enter three subject marks: ");
+    scanf("%d %d %d", &m1, &m2, &m3);
+
+    total = m1 + m2 + m3;
+    avg = total / 3.0;
+
+    printf("Total Marks = %d\n", total);
+    printf("Average Marks = %.2f\n", avg);
+
+    return 0;
+}
+
+Output 
+Enter three subject marks: 60 70 80
+Total Marks = 210
+Average Marks = 70.00
