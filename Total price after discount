@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    float price, disc, final;
+    printf("Enter price: ");
+    scanf("%f", &price);
+    disc = price * 0.10;
+    final = price - disc;
+    printf("Final Price = %.2f\n", final);
+    return 0;
+}
+output:
+Enter price: 1000
+Final Price = 900.00
