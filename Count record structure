@@ -1,0 +1,11 @@
+#include <stdio.h>
+struct data {
+    int x;
+};
+int main() {
+    int n;
+    printf("Enter records: ");
+    scanf("%d",&n);
+    printf("Total Records=%d",n);
+    return 0;
+}
