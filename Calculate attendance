@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int totalDays, presentDays;
+    float percentage;
+
+    printf("Enter total working days: ");
+    scanf("%d", &totalDays);
+
+    printf("Enter days present: ");
+    scanf("%d", &presentDays);
+
+    percentage = (presentDays * 100.0) / totalDays;
+
+    printf("Attendance Percentage = %.2f%%\n", percentage);
+
+    if(percentage >= 75)
+        printf("Eligible for exam\n");
+    else
+        printf("Not eligible for exam\n");
+
+    return 0;
+}
+OUTPUT 
+Enter total working days: 100
+Enter days present: 82
+Attendance Percentage = 82.00%
+Eligible for exam
