@@ -1,0 +1,45 @@
+THE PARALLEL COUNTER
+#include <stdio.h>
+#include <pthread.h>
+#include <unistd.h>
+
+// Thread function to print "Hello" every second
+void* print_hello(void* arg) {
+    while (1) {
+        printf("Hello\n");
+        sleep(1);
+    }
+    return NULL;
+}
+
+// Thread function to count numbers
+void* counter(void* arg) {
+    int count = 1;
+    while (1) {
+        printf("Counter: %d\n", count++);
+        sleep(1);
+    }
+    return NULL;
+}
+
+int main() {
+    pthread_t thread1, thread2;
+
+    // Create threads
+    pthread_create(&thread1, NULL, print_hello, NULL);
+    pthread_create(&thread2, NULL, counter, NULL);
+
+    // Wait for threads (they actually run forever)
+    pthread_join(thread1, NULL);
+    pthread_join(thread2, NULL);
+
+    return 0;
+}
+
+OUTPUT:
+Hello
+Counter: 1
+Hello
+Counter: 2
+Hello
+Counter: 3
