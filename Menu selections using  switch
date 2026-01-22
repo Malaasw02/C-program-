@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int ch;
+    printf("1.Tea  2.Coffee  3.Juice\n");
+    printf("Enter choice: ");
+    scanf("%d",&ch);
+    switch(ch) {
+        case 1: printf("Tea Selected\n"); break;
+        case 2: printf("Coffee Selected\n"); break;
+        case 3: printf("Juice Selected\n"); break;
+        default: printf("Invalid Choice\n");
+    }
+    return 0;
+}
+OUTPUT 
+1.Tea  2.Coffee  3.Juice
+Enter choice: 2
+Coffee Selected
