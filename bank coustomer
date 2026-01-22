@@ -1,0 +1,41 @@
+Program: Simple Interest Calculation for a Bank Customer
+
+#include <stdio.h>
+
+int main() {
+    char customerName[20];
+    float principal, rate, time, interest, total;
+
+    printf("Enter customer name: ");
+    scanf("%s", customerName);
+
+    printf("Enter principal amount: ");
+    scanf("%f", &principal);
+
+    printf("Enter rate of interest: ");
+    scanf("%f", &rate);
+
+    printf("Enter time period (in years): ");
+    scanf("%f", &time);
+
+    interest = (principal * rate * time) / 100;
+    total = principal + interest;
+
+    printf("\nBank Interest Details\n");
+    printf("Customer Name: %s\n", customerName);
+    printf("Simple Interest: %.2f\n", interest);
+    printf("Total Amount: %.2f\n", total);
+
+    return 0;
+}
+
+OUTPUT:
+Enter customer name: Aswin
+Enter principal amount: 10000
+Enter rate of interest: 5
+Enter time period (in years): 2
+
+Bank Interest Details
+Customer Name: Aswin
+Simple Interest: 1000.00
+Total Amount: 11000.00
