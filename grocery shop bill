@@ -1,0 +1,50 @@
+cProgram: Grocery Shop Total Bill Calculator
+#include <stdio.h>
+
+int main() {
+    char customer[20];
+    int n, i, quantity;
+    float price, total = 0;
+
+    printf("Enter customer name: ");
+    scanf("%s", customer);
+
+    printf("Enter number of items purchased: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        printf("\nEnter quantity of item %d: ", i);
+        scanf("%d", &quantity);
+
+        printf("Enter price per unit of item %d: ", i);
+        scanf("%f", &price);
+
+        total += quantity * price;  // Calculate total
+    }
+
+    printf("\nCustomer Name: %s\n", customer);
+    printf("Total Bill Amount: %.2f Rs\n", total);
+
+    if(total > 1000)
+        printf("Congratulations! You get a 5%% discount next time.\n");
+    else
+        printf("Thank you for shopping with us!\n");
+
+    return 0;
+}
+
+OUTPUT:Enter customer name: mala
+Enter number of items purchased: 4
+
+Enter quantity of item 1: 2
+Enter price per unit of item 1: 50
+
+Enter quantity of item 2: 3
+Enter price per unit of item 2: 30
+
+Enter quantity of item 3: 1
+Enter price per unit of item 3: 100
+
+Customer Name: mala
+Total Bill Amount: 290.00 Rs
+Thank you for shopping with us!
