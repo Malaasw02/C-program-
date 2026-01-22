@@ -1,0 +1,40 @@
+Program: Celsius to Fahrenheit Conversion
+
+
+#include <stdio.h>
+
+int main() {
+    char place[20];
+    float cTemp, fTemp;
+
+    printf("Enter place name: ");
+    scanf("%s", place);
+
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &cTemp);
+
+    fTemp = (cTemp * 9.0 / 5.0) + 32;
+
+    printf("\nTemperature Report\n");
+    printf("Place: %s\n", place);
+    printf("Celsius: %.2f °C\n", cTemp);
+    printf("Fahrenheit: %.2f °F\n", fTemp);
+
+    if(fTemp > 100)
+        printf("Weather is very hot\n");
+    else
+        printf("Weather is normal\n");
+
+    return 0;
+}
+
+
+OUTPUT:
+Enter place name: Chennai
+Enter temperature in Celsius: 35
+
+Temperature Report
+Place: Chennai
+Celsius: 35.00 °C
+Fahrenheit: 95.00 °F
+Weather is normal
