@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+struct emp {
+    int id;
+    float salary;
+};
+
+int main() {
+    struct emp e[2];
+    int i, sid;
+
+    for(i = 0; i < 2; i++)
+        scanf("%d %f", &e[i].id, &e[i].salary);
+
+    printf("Enter ID to update: ");
+    scanf("%d", &sid);
+
+    for(i = 0; i < 2; i++) {
+        if(e[i].id == sid) {
+            printf("Enter new salary: ");
+            scanf("%f", &e[i].salary);
+            printf("Updated Salary: %.2f", e[i].salary);
+            return 0;
+        }
+    }
+
+    printf("ID not found");
+    return 0;
+}
